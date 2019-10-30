@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgxSpinnerService } from 'ngx-spinner';
+import { NgxSpinnerService } from 'projects/ngx-spinner/src/public_api';
 
 /**
  * App Component
@@ -41,7 +41,8 @@ export class AppComponent {
     size: 'medium',
     color: '#fff',
     type: 'ball-8bits',
-    fullScreen: true
+    fullScreen: true,
+    zIndex: 1000
   };
 
   /**

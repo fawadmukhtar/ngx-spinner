@@ -33,6 +33,12 @@ export class NgxSpinnerComponent implements OnDestroy, OnInit, OnChanges {
    * @memberof NgxSpinnerComponent
    */
   @Input() size: Size;
+    /**
+   * To set spinner z-index
+   *
+   * @memberof NgxSpinnerComponent
+   */
+  @Input() zIndex: number;
   /**
    * To set spinner color(DEFAULTS.SPINNER_COLOR)
    *
@@ -141,7 +147,8 @@ export class NgxSpinnerComponent implements OnDestroy, OnInit, OnChanges {
       fullScreen: this.fullScreen,
       divArray: this.divArray,
       divCount: this.divCount,
-      show: this.show
+      show: this.show,
+      zIndex: this.zIndex ? this.zIndex : DEFAULTS.SPINNER_ZINDEX
     });
   }
   /**
